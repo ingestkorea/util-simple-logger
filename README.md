@@ -37,7 +37,8 @@ Async/await
 (async () => {
     const params = {
         title: title, // required
-        message: message // required
+        message: message, // required
+        mode: 'KST' // optional
     };
     await simpleLoggerClient.resolve(params);
 })();
