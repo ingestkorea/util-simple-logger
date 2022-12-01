@@ -1,7 +1,10 @@
 # @ingestkorea/util-simple-logger
 
+[![npm (scoped)](https://img.shields.io/npm/v/@ingestkorea/util-simple-logger?style=flat-square)](https://www.npmjs.com/package/@ingestkorea/util-simple-logger)
+[![NPM downloads](https://img.shields.io/npm/dm/@ingestkorea/util-simple-logger?style=flat-square)](https://www.npmjs.com/package/@ingestkorea/util-simple-logger)
+
 ## Description
-INGESTKOREA Util Simple Log Handler for Node.js.
+INGESTKOREA Utility Simple Log Handler for Node.js.
 
 ## Installing
 ```sh
@@ -9,13 +12,17 @@ npm install @ingestkorea/util-simple-logger
 ```
 
 ## Getting Started
+
+### Pre-requisites
++ Use TypeScript v4.x
+
 ### Import
-```typescript
+```ts
 // ES5 example
 const { simpleLoggerClient } = require('@ingestkorea/util-simple-logger');
 ```
 
-```typescript
+```ts
 // ES6+ example
 import { simpleLoggerClient } from '@ingestkorea/util-simple-logger';
 ```
@@ -23,7 +30,7 @@ import { simpleLoggerClient } from '@ingestkorea/util-simple-logger';
 
 Set Title, Message
 
-```typescript
+```ts
 const title = 'Sample Title';
 const message = JSON.stringify({
     requestId: "27af36a4af4254bd0106a0e1c49bc513",
@@ -33,7 +40,7 @@ const message = JSON.stringify({
 ```
 
 Async/await
-```typescript
+```ts
 (async () => {
     const params = {
         title: title, // required
@@ -43,3 +50,6 @@ Async/await
     await simpleLoggerClient.resolve(params);
 })();
 ```
+
+## License
+This Utility is distributed under the [MIT License](https://opensource.org/licenses/MIT), see LICENSE for more information.
